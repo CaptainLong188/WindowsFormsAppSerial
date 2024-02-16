@@ -48,6 +48,7 @@ namespace WindowsFormsAppSerial
             try
             {
                 serialPortReceive.Open();
+                serialPortReceive.Write("W");
                 lblReceive.Image = Properties.Resources.checked1;
                 MessageBox.Show(text: $"Puerto {serialPortReceive.PortName} abierto",
                 caption: "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -104,7 +105,11 @@ namespace WindowsFormsAppSerial
             {
                 SerialPort sp = (SerialPort)sender;
                 ledStatus = sp.ReadLine();
-                ShowReceivedData(ledStatus);   
+                ShowReceivedData(ledStatus);
+                if(serialPortSend != null && serialPortSend.IsOpen) 
+                { 
+                    serialPortSend.WriteLine(ledStatus);
+                }
             }
             catch (Exception ex)
             {

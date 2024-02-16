@@ -148,7 +148,7 @@ namespace WindowsFormsAppSerial
             this.lblEnviar.AutoSize = true;
             this.lblEnviar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnviar.Location = new System.Drawing.Point(645, 411);
+            this.lblEnviar.Location = new System.Drawing.Point(633, 413);
             this.lblEnviar.Name = "lblEnviar";
             this.lblEnviar.Size = new System.Drawing.Size(78, 29);
             this.lblEnviar.TabIndex = 10;
